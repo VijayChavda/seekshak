@@ -4,14 +4,14 @@ import seekshak.dbwrapper.DbEntity;
 
 public class Research implements DbEntity {
 
-    private Integer idresearch;
-    private String title;
-    private String paperType;
-    private String issn;
-    private String impactFactor;
-    private String year;
-    private String volume;
-    private String pageno;
+    public Integer idresearch;
+    public String title;
+    public String paper_type;
+    public String issn;
+    public Double impact_factor;
+    public String year;
+    public String volume;
+    public String pageno;
 
     public Research() {
     }
@@ -37,11 +37,11 @@ public class Research implements DbEntity {
     }
 
     public String getPaperType() {
-        return paperType;
+        return paper_type;
     }
 
     public void setPaperType(String paperType) {
-        this.paperType = paperType;
+        this.paper_type = paperType;
     }
 
     public String getIssn() {
@@ -52,12 +52,12 @@ public class Research implements DbEntity {
         this.issn = issn;
     }
 
-    public String getImpactFactor() {
-        return impactFactor;
+    public Double getImpactFactor() {
+        return impact_factor;
     }
 
-    public void setImpactFactor(String impactFactor) {
-        this.impactFactor = impactFactor;
+    public void setImpactFactor(Double impactFactor) {
+        this.impact_factor = impactFactor;
     }
 
     public String getYear() {

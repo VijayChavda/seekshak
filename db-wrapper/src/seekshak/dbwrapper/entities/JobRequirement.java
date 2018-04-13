@@ -4,95 +4,132 @@ import seekshak.dbwrapper.DbEntity;
 
 public class JobRequirement implements DbEntity {
 
-    private Integer idjobRequirement;
-    private Integer tenth;
-    private Integer twelve;
-    private Integer graduation;
-    private Integer postGrad;
-    private Integer doctorate;
-    private Integer research;
-    private Integer experience;
-    private Integer ageLimit;
-    private String specialization;
-    private String gradBranch;
+    public Integer idjob_requirement;
+    public Double tenth;
+    public Double twelve;
+    public Double graduation;
+    public Double post_grad;
+    public Double doctorate;
+    public Double research;
+    public Double experience;
+    public Double age_limit;
+    public String specialization;
+    public String grad_branch;
+    public Double w_tenth;
+    public Double w_twelve;
+    public Double w_graduation;
+    public Double w_post_grad;
+    public Double w_doctorate;
+    public Double w_experience;
 
     public JobRequirement() {
     }
 
     public JobRequirement(Integer idjobRequirement) {
-        this.idjobRequirement = idjobRequirement;
+        this.idjob_requirement = idjobRequirement;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (getIdjobRequirement() != null ? getIdjobRequirement().hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (!(object instanceof JobRequirement)) {
+            return false;
+        }
+        JobRequirement other = (JobRequirement) object;
+        return !((this.idjob_requirement == null && other.idjob_requirement != null) || (this.idjob_requirement != null && !this.idjob_requirement.equals(other.idjob_requirement)));
+    }
+
+    @Override
+    public String toString() {
+        return String.format("idjobRequirement='%d'", getIdjobRequirement());
+    }
+
+    @Override
+    public String getTableName() {
+        return "job_requirement";
+    }
+
+    @Override
+    public String getIdentifyingSQLClause() {
+        return this.toString();
     }
 
     public Integer getIdjobRequirement() {
-        return idjobRequirement;
+        return idjob_requirement;
     }
 
     public void setIdjobRequirement(Integer idjobRequirement) {
-        this.idjobRequirement = idjobRequirement;
+        this.idjob_requirement = idjobRequirement;
     }
 
-    public Integer getTenth() {
+    public Double getTenth() {
         return tenth;
     }
 
-    public void setTenth(Integer tenth) {
+    public void setTenth(Double tenth) {
         this.tenth = tenth;
     }
 
-    public Integer getTwelve() {
+    public Double getTwelve() {
         return twelve;
     }
 
-    public void setTwelve(Integer twelve) {
+    public void setTwelve(Double twelve) {
         this.twelve = twelve;
     }
 
-    public Integer getGraduation() {
+    public Double getGraduation() {
         return graduation;
     }
 
-    public void setGraduation(Integer graduation) {
+    public void setGraduation(Double graduation) {
         this.graduation = graduation;
     }
 
-    public Integer getPostGrad() {
-        return postGrad;
+    public Double getPostGrad() {
+        return post_grad;
     }
 
-    public void setPostGrad(Integer postGrad) {
-        this.postGrad = postGrad;
+    public void setPostGrad(Double postGrad) {
+        this.post_grad = postGrad;
     }
 
-    public Integer getDoctorate() {
+    public Double getDoctorate() {
         return doctorate;
     }
 
-    public void setDoctorate(Integer doctorate) {
+    public void setDoctorate(Double doctorate) {
         this.doctorate = doctorate;
     }
 
-    public Integer getResearch() {
+    public Double getResearch() {
         return research;
     }
 
-    public void setResearch(Integer research) {
+    public void setResearch(Double research) {
         this.research = research;
     }
 
-    public Integer getExperience() {
+    public Double getExperience() {
         return experience;
     }
 
-    public void setExperience(Integer experience) {
+    public void setExperience(Double experience) {
         this.experience = experience;
     }
 
-    public Integer getAgeLimit() {
-        return ageLimit;
+    public Double getAgeLimit() {
+        return age_limit;
     }
 
-    public void setAgeLimit(Integer ageLimit) {
-        this.ageLimit = ageLimit;
+    public void setAgeLimit(Double ageLimit) {
+        this.age_limit = ageLimit;
     }
 
     public String getSpecialization() {
@@ -104,42 +141,59 @@ public class JobRequirement implements DbEntity {
     }
 
     public String getGradBranch() {
-        return gradBranch;
+        return grad_branch;
     }
 
     public void setGradBranch(String gradBranch) {
-        this.gradBranch = gradBranch;
+        this.grad_branch = gradBranch;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (idjobRequirement != null ? idjobRequirement.hashCode() : 0);
-        return hash;
+    public Double getW_tenth() {
+        return w_tenth;
     }
 
-    @Override
-    public boolean equals(Object object) {
-        if (!(object instanceof JobRequirement)) {
-            return false;
-        }
-        JobRequirement other = (JobRequirement) object;
-        return !((this.idjobRequirement == null && other.idjobRequirement != null) || (this.idjobRequirement != null && !this.idjobRequirement.equals(other.idjobRequirement)));
+    public void setW_tenth(Double w_tenth) {
+        this.w_tenth = w_tenth;
     }
 
-    @Override
-    public String toString() {
-        return String.format("idjobRequirement='%d'", idjobRequirement);
+    public Double getW_twelve() {
+        return w_twelve;
     }
 
-    @Override
-    public String getTableName() {
-        return "job_requirement";
+    public void setW_twelve(Double w_twelve) {
+        this.w_twelve = w_twelve;
     }
 
-    @Override
-    public String getIdentifyingSQLClause() {
-        return this.toString();
+    public Double getW_graduation() {
+        return w_graduation;
+    }
+
+    public void setW_graduation(Double w_graduation) {
+        this.w_graduation = w_graduation;
+    }
+
+    public Double getW_postGrad() {
+        return w_post_grad;
+    }
+
+    public void setW_postGrad(Double w_postGrad) {
+        this.w_post_grad = w_postGrad;
+    }
+
+    public Double getW_doctorate() {
+        return w_doctorate;
+    }
+
+    public void setW_doctorate(Double w_doctorate) {
+        this.w_doctorate = w_doctorate;
+    }
+
+    public Double getW_experience() {
+        return w_experience;
+    }
+
+    public void setW_experience(Double w_experience) {
+        this.w_experience = w_experience;
     }
 
 }
